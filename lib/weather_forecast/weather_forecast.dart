@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:weather_forecast/weather_forecast/network/network.dart';
+import 'package:weather_forecast/weather_forecast/ui/mid_View.dart';
 
 import 'model/weather_forecast_model.dart';
 class WeatherForecast extends StatefulWidget {
@@ -30,15 +31,20 @@ class _WeatherForecastState extends State<WeatherForecast> {
       body: ListView(
         children: [
            textFieldView(),
+
           Container(
             padding: EdgeInsets.only(top: 5.0),
             child:
             FutureBuilder
               (
               future: forecastObject,
-              builder: (BuildContext context, AsyncSnapshot<dynamic> snapshot) {
+              builder: (BuildContext context, AsyncSnapshot<WeatherForecastModel> snapshot) {
               if(snapshot.hasData){
-                return Text("All Goods.");
+                return Column(
+                  children: [
+                    midView(snapshot),
+                  ],
+                );
               }
               else{
                 return Container(
