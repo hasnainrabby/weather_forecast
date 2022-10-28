@@ -10,6 +10,8 @@ This project is a starting point for a Flutter application with JSON. We get  AP
 - Convert JSON to Dart Converter because of creating model class complex and long time issue.
 - Copy and paste the Dart code into our IDE.
 
+SetUp network class.Pulling JSON using Future Builder & showing data. 
+
 
 A few resources to get you started if this is your first Flutter project:
 
