@@ -9,7 +9,7 @@ class Network{
 
   Future<WeatherForecastModel> getWeatherForecast({required String cityName}) async {
     var finalUrl = "https://api.openweathermap.org/data/2.5/weather?q="+cityName+""
-        "&appid="+ForecastUtil.AppId+"&units=imperial"; // change to metric or imperial.
+        "&appid="+ForecastUtil.AppId+"&units=metric"; // change to metric(Celsius) or imperial(fahrenheit).
 
     final response = await get(Uri.parse(Uri.encodeFull(finalUrl)));
     print("URL: ${Uri.encodeFull(finalUrl)}");
