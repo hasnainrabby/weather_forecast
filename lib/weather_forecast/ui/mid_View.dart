@@ -62,7 +62,7 @@ Widget midView(AsyncSnapshot<WeatherForecastModel> snapshot){
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Text("${airSpeed!.toStringAsFixed(0)} km/h"),
+                          Text("${((airSpeed!*3.6).toStringAsFixed(0))} km/h"), //Converting m/s to km/h
                           Icon(Icons.arrow_forward,size: 20,color: Colors.brown,)
                         ],
                       ),
