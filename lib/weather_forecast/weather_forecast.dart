@@ -12,7 +12,7 @@ class WeatherForecast extends StatefulWidget {
 
 class _WeatherForecastState extends State<WeatherForecast> {
   late Future<WeatherForecastModel> forecastObject;
-  String _cityName = "Rajshahi";
+  String _cityName = "Kushtia";
   @override
   void initState() {
 

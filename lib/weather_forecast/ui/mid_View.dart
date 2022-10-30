@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:weather_forecast/weather_forecast/util/forecast_util.dart';
-
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import '../model/weather_forecast_model.dart';
 
 Widget midView(AsyncSnapshot<WeatherForecastModel> snapshot){
@@ -35,7 +35,8 @@ Widget midView(AsyncSnapshot<WeatherForecastModel> snapshot){
             ),
           ),
           const SizedBox(height: 12,),
-          Icon(Icons.wb_sunny,size: 50,),
+          //Icon(Icons.wb_sunny,size: 50,),
+          Icon(FontAwesomeIcons.cloud,size: 50,color: Colors.blueGrey,),
 
           Padding(
             padding: const EdgeInsets.symmetric(vertical: 12.0,horizontal: 12.0),
@@ -63,7 +64,8 @@ Widget midView(AsyncSnapshot<WeatherForecastModel> snapshot){
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Text("${((airSpeed!*3.6).toStringAsFixed(0))} km/h"), //Converting m/s to km/h
-                          Icon(Icons.arrow_forward,size: 20,color: Colors.brown,)
+                          //Icon(Icons.arrow_forward,size: 20,color: Colors.brown,)
+                          Icon(FontAwesomeIcons.wind,size: 20,color: Colors.brown,)
                         ],
                       ),
                     ),
@@ -73,7 +75,7 @@ Widget midView(AsyncSnapshot<WeatherForecastModel> snapshot){
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Text("${humidity!.toStringAsFixed(0)} %"),
-                          Icon(Icons.hot_tub,size: 20,color: Colors.brown,)
+                          Icon(FontAwesomeIcons.solidFaceGrinBeamSweat,size: 20,color: Colors.brown,)
                         ],
                       ),
                     ),
@@ -81,7 +83,8 @@ Widget midView(AsyncSnapshot<WeatherForecastModel> snapshot){
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Text("${maxTemp!.toStringAsFixed(0)}°C"),
-                        const Icon(Icons.arrow_circle_up,size: 20,color: Colors.brown,)
+                       // const Icon(Icons.arrow_circle_up,size: 20,color: Colors.brown,)
+                        Icon(FontAwesomeIcons.temperatureHigh,size: 20,color: Colors.brown,)
                       ],
                     )
                   ],
