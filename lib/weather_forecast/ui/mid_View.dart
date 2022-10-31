@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:weather_forecast/weather_forecast/util/convert_icon.dart';
 import 'package:weather_forecast/weather_forecast/util/forecast_util.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import '../model/weather_forecast_model.dart';
@@ -35,8 +36,12 @@ Widget midView(AsyncSnapshot<WeatherForecastModel> snapshot){
             ),
           ),
           const SizedBox(height: 12,),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: getWeatherIcon(weatherDescription: forecastList![0].main!, color: Colors.grey, size: 75),
+          ),
           //Icon(Icons.wb_sunny,size: 50,),
-          Icon(FontAwesomeIcons.cloud,size: 50,color: Colors.blueGrey,),
+         // Icon(FontAwesomeIcons.cloud,size: 50,color: Colors.blueGrey,),
 
           Padding(
             padding: const EdgeInsets.symmetric(vertical: 12.0,horizontal: 12.0),
@@ -46,7 +51,7 @@ Widget midView(AsyncSnapshot<WeatherForecastModel> snapshot){
                 Text("${currentTemp!.toStringAsFixed(0)}°C",style: const TextStyle(
                   fontSize: 30,fontWeight: FontWeight.w400,color: Colors.blue
                 ),),
-                Text(forecastList![0].description!.toUpperCase(),style: const TextStyle(
+                Text(forecastList[0].description!.toUpperCase(),style: const TextStyle(
                     fontSize: 20,fontWeight: FontWeight.w400,color: Colors.black45
                 )),
               ],
