@@ -10,7 +10,11 @@ This project is a starting point for a Flutter application with JSON. We get  AP
 - Convert JSON to Dart Converter because of creating model class complex and long time issue.
 - Copy and paste the Dart code into our IDE.
 
-SetUp network class.Pulling JSON using Future Builder & showing data. 
+-SetUp network class.Pulling JSON using Future Builder & showing data. 
+-UI setUp.
+-Search dynamic location.
+-Adding dependency for time & date convert and also for icons.
+-Get weatherIcon helper function.
 
 
 A few resources to get you started if this is your first Flutter project:
