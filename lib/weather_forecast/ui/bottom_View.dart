@@ -90,5 +90,5 @@ String getClockInUtcPlus6Hours(int timeSinceEpochInSec) {
   final time = DateTime.fromMillisecondsSinceEpoch(timeSinceEpochInSec * 1000,
       isUtc: true)
       .add(const Duration(hours: 6));
-  return '${time.hour}:${time.second}';
+  return '${time.hour}:${time.minute}';
 }
